@@ -1,0 +1,9 @@
+.editorconfig export-ignore
+.eslintrc export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+phpcs.xml.dist export-ignore
+/sass export-ignore
+package.json export-ignore
+README.md export-ignore
+yarn.lock export-ignore

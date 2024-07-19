@@ -1,0 +1,13 @@
+::-moz-selection {
+	text-shadow: none;
+	color: $color__select-text;
+	background: $color__select-bg;
+	background-color: $color__select-bg;
+}
+
+::selection {
+	text-shadow: none;
+	color: $color__select-text;
+	background: $color__select-bg;
+	background-color: $color__select-bg;
+}

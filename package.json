@@ -1,0 +1,15 @@
+{
+  "name": "musavisa",
+  "version": "1.0.0",
+  "description": "Hassun hauska musavisa sipulimökkiin.",
+  "author": "Lasse Haukka",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "watch": "sass --watch sass:.",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
+}

@@ -1,0 +1,8 @@
+//Custom media queries
+@function below( $size-px ) {
+  @return "max-width: #{$size-px}";
+}
+
+@function above( $size-px ) {
+  @return "min-width: #{$size-px}";
+}

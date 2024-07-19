@@ -1,0 +1,157 @@
+$color__background: $color__dark;
+$color__background-form: #fff;
+$color__text: $color__dark;
+$color__effect: $color__gold;
+
+$color__link: #fff;
+$color__link-hover: $color__goldlight;
+
+$color__input: $color__dark;
+$color__input-hover: $color__goldlight;
+$color__input-btn-bg: $color__goldlight;
+$color__input-btn-text: #fff;
+$color__input-btn-bg-hover: #fff;
+$color__input-btn-text-hover: $color__goldlight;
+
+$color__lang__icon: $color__goldlight;
+$color__lang__bg: #fff;
+$color__lang__text: #000;
+$color__lang__select: #000;
+$color__lang__select__bg: #fff;
+$color__lang__bg-hover: $color__goldlight;
+$color__lang__text-hover: #fff;
+$color__lang__select-hover: $color__goldlight;
+$color__lang__select__bg-hover: #fff;
+
+
+body.login {
+	background-color: $color__background;
+
+	a {
+		color: $color__link !important;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+		text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+		&:hover {
+			color: $color__link-hover !important;
+		}
+
+		&:focus:not(:hover) {
+			color: $color__link-hover !important;
+			outline-offset: 2px;
+			outline: 2px solid $color__link-hover;
+		}
+	}
+
+	div#login {
+
+		#login_error,
+		.message,
+		.success {
+			color: $color__text;
+			background-color: $color__background-form;
+			border-left: 4px solid $color__effect !important;
+		}
+
+		h1 {
+
+			a {
+				width: 250px;
+				height: 150px;
+				background: url('images/logo-vuokatin-aateli-white.svg') no-repeat top center;
+				box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+				text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+				&:focus:not(:hover) {
+					outline-offset: 2px;
+					outline: 2px solid $color__effect;
+				}
+			}
+		}
+
+		#loginform {
+			background-color: $color__background-form;
+
+			input {
+				color: $color__input;
+				box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+				text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+				&:hover,
+				&:focus {
+					border: 1px solid $color__input-hover;
+				}
+			}
+
+			p {
+				color: $color__text;
+
+				label {
+					color: $color__text;
+				}
+
+				&.submit {
+
+					input#wp-submit {
+						color: $color__input-btn-text;
+						background: $color__input-btn-bg;
+						border: 1px solid $color__input-btn-bg;
+						box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+						text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+						&:hover,
+						&:focus {
+							color: $color__input-btn-text-hover;
+							background: $color__input-btn-bg-hover;
+							border: 1px solid $color__input-btn-text-hover;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.language-switcher {
+
+		.dashicons-translation {
+
+			&:before {
+    		color: $color__lang__icon;
+			}
+		}
+
+		select {
+			color: $color__lang__select;
+			background: $color__lang__select__bg;
+			border: 1px solid $color__lang__select;
+			box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				color: $color__lang__select-hover;
+				background: $color__lang__select__bg-hover;
+				border: 1px solid $color__lang__select-hover;
+			}
+		}
+
+		input {
+			color: $color__lang__text;
+			background: $color__lang__bg;
+			border: 1px solid $color__lang__text;
+			box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
+			&:hover,
+			&:focus {
+				outline: 0;
+				color: $color__lang__text-hover;
+				background: $color__lang__bg-hover;
+				border: 1px solid $color__lang__bg-hover;
+			}
+		}
+	}
+}

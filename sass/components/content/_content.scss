@@ -1,0 +1,95 @@
+.content {
+    @include wrapper;
+    padding: 2em 0;
+    min-height: calc(100vh - 190px);
+
+    &__area {
+        gap: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, calc(100% / 2 - 1em / 2));
+
+        @media ( above($sm) ) {
+            grid-template-columns: repeat(3, calc(100% / 3 - 2em / 3));
+        }
+
+        @media ( above($md) ) {
+            grid-template-columns: repeat(4, calc(100% / 4 - 3em / 4));
+        }
+
+        #tile-message {
+            width: 100%;
+            grid-column-start: 1;
+            grid-column-end: span 2;
+
+            @media ( above($sm) ) {
+                grid-column-end: span 3;
+            }
+
+            @media ( above($md) ) {
+                grid-column-end: span 4;
+            }
+
+            p {
+                font-size: 1.6em;
+                font-weight: 600;
+
+                @media ( above($sm) ) {
+                    font-size: 1.8em;
+                }
+
+                @media ( above($md) ) {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .tile {
+            display: none;
+            border-radius: 8px;
+            aspect-ratio: 1 / 1;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba($color__gray__dark, 0.25);
+            box-shadow: 0 0 0.5em 0 rgba($color__gray__dark, 0.1);
+
+            &.visible {
+                display: flex;
+                animation: fade-in 0.5s;
+            }
+
+            p {
+                margin: 0;
+                font-size: 3em;
+                line-height: 1;
+                font-weight: 600;
+
+                @media ( above($sm) ) {
+                    font-size: 3.6em;
+                }
+            }
+
+            &.red {
+                background-color: $color__red;
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            &.white {
+                background-color: #fff;
+            }
+
+            @keyframes fade-in {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

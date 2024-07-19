@@ -1,0 +1,41 @@
+.bottom {
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color__blue;
+
+    &__controls {
+        @include wrapper;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        #reset-button {
+            color: #fff;
+            background-color: $color__red;
+            border: 1px solid $color__red;
+
+            &:hover {
+                color: $color__red;
+                border: 1px solid #fff;
+                background-color: #fff;
+            }
+
+            &:focus-visible {
+                box-shadow:	0 0 0 2px #fff, 0 0 0 4px $color__red;
+            }
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            color: $color__gray__light;
+            background-color: $color__gray;
+            border: 1px solid $color__gray;
+        }
+    }
+}

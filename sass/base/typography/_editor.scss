@@ -1,0 +1,26 @@
+.edit-post-visual-editor {
+
+	h1 {
+		@include wp-fontsizes(2rem);
+	}
+
+	h2 {
+		@include wp-fontsizes(1.8rem);
+	}
+
+	h3 {
+		@include wp-fontsizes(1.6rem);
+	}
+
+	h4 {
+		@include wp-fontsizes(1.4rem);
+	}
+
+	h5 {
+		@include wp-fontsizes(1.25rem);
+	}
+
+	h6 {
+		@include wp-fontsizes(1.1rem);
+	}
+}

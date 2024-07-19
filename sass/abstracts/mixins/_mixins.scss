@@ -1,0 +1,50 @@
+// Wrapper
+@mixin wrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $size__wrapper;
+
+	@media ( below($size__wrapper) ) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+@mixin button($fontsize) {
+
+	color: inherit;
+	line-height: 1;
+	font-weight: 600;
+	border-radius: 4px;
+	font-size: $fontsize;
+	padding: 0.75em 1.25em;
+	background: $color__cyan;
+	border: 1px solid $color__cyan;
+
+	@media ( above($lg) ) {
+		padding: 0.75em 1.5em;
+		font-size: $fontsize * 1.1;
+	}
+
+	&:hover {
+		color: $color__blue;
+		border: 1px solid #fff;
+		background-color: #fff;
+	}
+
+	&:focus-visible {
+		outline: 0;
+		color: #fff;
+		outline-offset: 0;
+		border: 1px solid #fff;
+		background-color: #fff;
+		box-shadow:	0 0 0 2px #fff, 0 0 0 4px $color__cyan;
+	}
+
+	&.active {
+		color: #fff;
+		border: 1px solid $color__gray__dark;
+		background-color: $color__gray__dark;
+	}
+}
