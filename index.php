@@ -30,9 +30,32 @@ $version = '1.0.0';
 
 		<section class="content">
 			<div class="content__area">
+
+				<div class="music">
+					<audio controls>
+						<source src="music/Master of Puppets.mp3" type="audio/mpeg">
+					</audio> 
+
+					<div class="buttons">
+						<button class="music-button" data-duration="1500">Lyhyt #1</button>
+						<button class="music-button" data-duration="3500">Lyhyt #2</button>
+					</div>
+				</div>
+
+				<div class="music">
+					<audio controls>
+						<source src="music/Nemo.mp3" type="audio/mpeg">
+					</audio> 
+
+					<div class="buttons">
+						<button class="music-button" data-duration="1150">Lyhyt #1</button>
+						<button class="music-button" data-duration="2500">Lyhyt #2</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
+		<script src="jquery-3.7.1.min.js" defer=""></script>
 		<script src="scripts.js?v=<?php echo $version; ?>" defer=""></script>
 	</body>
 </html>
