@@ -16,7 +16,6 @@ $version = '1.0.0';
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="style.css?v=<?php echo $version; ?>" />
 	</head>
 	<body>
@@ -31,27 +30,17 @@ $version = '1.0.0';
 		<section class="content">
 			<div class="content__area">
 
-				<div class="music">
-					<audio controls>
-						<source src="music/Master of Puppets.mp3" type="audio/mpeg">
-					</audio> 
+				<div class="content__area__section">
+					<div class="directions">
+						<h2>Lyhyt alku</h2>
+						<p>Kappale pitää arvata lyhyestä pätkästä alusta. Jokaisesta kappaleesta on kaksi eri mittaista versiota. Jos kummastakaan ei arvata oikein, aloitetaan soittamaan kappaletta kokonaan.</p>
+					</div>
 
-					<div class="buttons">
-						<button class="music-button" data-duration="1500">Lyhyt #1</button>
-						<button class="music-button" data-duration="3500">Lyhyt #2</button>
+					<div class="songs">
+						<?php require_once 'inc/short-songs.php'; ?>
 					</div>
 				</div>
 
-				<div class="music">
-					<audio controls>
-						<source src="music/Nemo.mp3" type="audio/mpeg">
-					</audio> 
-
-					<div class="buttons">
-						<button class="music-button" data-duration="1150">Lyhyt #1</button>
-						<button class="music-button" data-duration="2500">Lyhyt #2</button>
-					</div>
-				</div>
 			</div>
 		</section>
 
