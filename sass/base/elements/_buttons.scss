@@ -3,5 +3,4 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	@include button(1em);
-	color: $color__blue;
 }
