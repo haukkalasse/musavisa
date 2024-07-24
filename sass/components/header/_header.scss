@@ -5,15 +5,15 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: $color__blue;
+    background-color: $color__gray__dark;
 
     &__header {
-        @include wrapper;
         gap: 1em;
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: flex-start;
+        @include wrapper;
 
         h1 {
             margin: 0;
