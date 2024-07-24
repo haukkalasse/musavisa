@@ -1,6 +1,8 @@
 /node_modules
 /vendor
 /music
+/themes
+/reverse
 package-lock.json
 composer.lock
 .DS_Store
