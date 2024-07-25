@@ -3,6 +3,7 @@
 /music
 /themes
 /reverse
+/tts
 package-lock.json
 composer.lock
 .DS_Store
