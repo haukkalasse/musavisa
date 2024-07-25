@@ -135,11 +135,17 @@ $short_songs = array(
 	),
 );
 
+//Counter
+$counter = 1;
 
 //Render array
 foreach ( $short_songs as $song ) {
 	?>
 	<div class="song">
+		<div class="count">
+			<p><?php echo $counter; ?> / <?php echo count( $short_songs ); ?></p>
+		</div>
+
 		<div class="player">
 			<audio controls>
 				<source src="music/<?php echo $song['file']; ?>" type="audio/mpeg">
@@ -157,4 +163,5 @@ foreach ( $short_songs as $song ) {
 		</div>
 	</div>
 	<?php
+	++$counter;
 }
