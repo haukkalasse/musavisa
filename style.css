@@ -649,7 +649,7 @@ textarea {
   width: 100%;
   padding: 2em;
   display: flex;
-  border-radius: 8px;
+  border-radius: 12px;
   flex-direction: column;
   background-color: #171717;
 }
@@ -679,11 +679,76 @@ textarea {
   padding-top: 4em;
   border-top: 2px solid #444444;
 }
+.content__area__section .songs .song .count {
+  border-radius: 4px;
+  padding: 0.5em 0.75em;
+  background-color: #d4630d;
+}
+.content__area__section .songs .song .count p {
+  margin: 0;
+  line-height: 1;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+.content__area__section .songs .song .count ::-moz-selection {
+  color: #fff;
+  background: #171717;
+  background-color: #171717;
+}
+.content__area__section .songs .song .count ::selection {
+  color: #fff;
+  background: #171717;
+  background-color: #171717;
+}
+.content__area__section .songs .song .lyrics {
+  width: 100%;
+  gap: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+@media (min-width: 850px) {
+  .content__area__section .songs .song .lyrics {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+.content__area__section .songs .song .lyrics .original,
+.content__area__section .songs .song .lyrics .translated {
+  width: 100%;
+  padding: 1em;
+  border-radius: 12px;
+  background-color: #444444;
+}
+@media (min-width: 850px) {
+  .content__area__section .songs .song .lyrics .original,
+  .content__area__section .songs .song .lyrics .translated {
+    width: calc(50% - 0.75em);
+  }
+}
+.content__area__section .songs .song .lyrics .original p,
+.content__area__section .songs .song .lyrics .translated p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.content__area__section .songs .song .lyrics .original p.heading,
+.content__area__section .songs .song .lyrics .translated p.heading {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
 .content__area__section .songs .song .player {
   width: 100%;
   padding: 1em;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: #444444;
+}
+.content__area__section .songs .song .player p {
+  font-weight: 500;
+  margin: 0 0 0.5em;
 }
 .content__area__section .songs .song .player audio {
   display: block;
@@ -699,13 +764,22 @@ textarea {
 .content__area__section .songs .song .answer {
   width: 100%;
   padding: 1em;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: #313131;
 }
 .content__area__section .songs .song .answer a {
+  display: block;
+  width: 100%;
   text-decoration: none;
 }
+.content__area__section .songs .song .answer a:focus {
+  outline: 0;
+}
+.content__area__section .songs .song .answer a:focus-visible {
+  outline: 2px solid #d4630d;
+}
 .content__area__section .songs .song .answer p {
+  display: none;
   width: 100%;
   margin: 1em 0 0 0;
 }
