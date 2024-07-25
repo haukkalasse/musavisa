@@ -32,12 +32,34 @@ $version = '1.0.0';
 
 				<div class="content__area__section">
 					<div class="directions">
-						<h2>Lyhyt alku</h2>
-						<p>Kappale pitää arvata lyhyestä pätkästä alusta. Jokaisesta kappaleesta on kaksi eri mittaista versiota. Jos kummastakaan ei arvata oikein, aloitetaan soittamaan kappaletta kokonaan.</p>
+						<h2>Lyhyt biisi</h2>
+						<p>Kappale pitää arvata erittäin lyhyestä pätkästä alusta. Jokaisesta kappaleesta on kaksi eri mittaista lyhennettyä versiota. Jos kummastakaan ei arvata oikein, aloitetaan soittamaan kappaletta kokonaan.</p>
 					</div>
 
 					<div class="songs">
 						<?php require_once 'inc/short-songs.php'; ?>
+					</div>
+				</div>
+
+				<div class="content__area__section">
+					<div class="directions">
+						<h2>Väärinpäin</h2>
+						<p>Toistetaan elokuvan tai sarjan tunnettua kappaletta takaperin. Jos oikeaa arvausta ei tule, soitetaan oikeinpäin.</p>
+					</div>
+
+					<div class="songs">
+						<?php require_once 'inc/theme-songs.php'; ?>
+					</div>
+				</div>
+
+				<div class="content__area__section">
+					<div class="directions">
+						<h2>Lost in translation</h2>
+						<p>Tunnista paskasti suomennettu kappale. Ensin kuunnellaan hieno tulkinta TTS:llä. Jos ei sen perusteella arvata oikein, lausutaan alkuperäistä.</p>
+					</div>
+
+					<div class="songs">
+						<?php require_once 'inc/translated-songs.php'; ?>
 					</div>
 				</div>
 
