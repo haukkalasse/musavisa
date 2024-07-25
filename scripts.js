@@ -36,9 +36,11 @@
 
         if ( $(this).hasClass('open') ) {
             $(this).next('p').slideUp();
+            $(this).html('Näytä vastaus');
             $(this).removeClass('open');
         } else {
             $(this).next('p').slideDown();
+            $(this).html('Piilota vastaus');
             $(this).addClass('open');
         }
     });
