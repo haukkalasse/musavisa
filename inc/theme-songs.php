@@ -17,12 +17,7 @@ $theme_songs = array(
 		'file_reverse'  => 'Hedwigs Theme Reverse.mp3',
 	),
 	array(
-		'name'          => 'James Bond',
-		'file_standard' => 'James Bond.mp3',
-		'file_reverse'  => 'James Bond Reverse.mp3',
-	),
-	array(
-		'name'          => 'X Files',
+		'name'          => 'X-Files',
 		'file_standard' => 'X Files.mp3',
 		'file_reverse'  => 'X Files Reverse.mp3',
 	),
@@ -86,13 +81,24 @@ $theme_songs = array(
 		'file_standard' => 'Robocop.mp3',
 		'file_reverse'  => 'Robocop Reverse.mp3',
 	),
+	array(
+		'name'          => 'James Bond',
+		'file_standard' => 'James Bond.mp3',
+		'file_reverse'  => 'James Bond Reverse.mp3',
+	),
 );
 
+//Counter
+$counter = 1;
 
 //Render array
 foreach ( $theme_songs as $song ) {
 	?>
 	<div class="song">
+		<div class="count">
+			<p><?php echo $counter; ?> / <?php echo count( $theme_songs ); ?></p>
+		</div>
+		
 		<div class="player">
 			<p>Takaperin</p>
 			<audio controls>
@@ -113,4 +119,5 @@ foreach ( $theme_songs as $song ) {
 		</div>
 	</div>
 	<?php
+	++$counter;
 }
