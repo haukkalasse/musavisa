@@ -13,7 +13,7 @@
             width: 100%;
             padding: 2em;
             display: flex;
-            border-radius: 8px;
+            border-radius: 12px;
             flex-direction: column;
             background-color: $color__gray__dark;
 
@@ -47,11 +47,80 @@
                         border-top: 2px solid $color__gray;
                     }
 
+                    .count {
+                        border-radius: 4px;
+                        padding: 0.5em 0.75em;
+                        background-color: $color__orange;
+
+                        p {
+                            margin: 0;
+                            line-height: 1;
+                            font-size: 0.8em;
+                            font-weight: 700;
+                        }
+
+                        ::-moz-selection {
+                            color: #fff;
+                            background: $color__gray__dark;
+                            background-color: $color__gray__dark;
+                        }
+
+                        ::selection {
+                            color: #fff;
+                            background: $color__gray__dark;
+                            background-color: $color__gray__dark;
+                        }
+                    }
+
+                    .lyrics {
+                        width: 100%;
+                        gap: 1.5em;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        @media ( above($md) ) {
+                            flex-direction: row;
+                            align-items: stretch;
+                        }
+
+                        .original,
+                        .translated {
+                            width: 100%;
+                            padding: 1em;
+                            border-radius: 12px;
+                            background-color: $color__gray;
+
+                            @media ( above($md) ) {
+                                width: calc(100% / 2 - 1.5em / 2);
+                            }
+
+                            p {
+                                margin: 0;
+                                font-size: 0.8em;
+                                font-weight: 400;
+                                line-height: 1.5;
+
+                                &.heading {
+                                    font-size: 1.2em;
+                                    font-weight: 500;
+                                    margin-bottom: 0.5em;
+                                }
+                            }
+                        }
+                    }
+
                     .player {
                         width: 100%;
                         padding: 1em;
-                        border-radius: 8px;
+                        border-radius: 12px;
                         background-color: $color__gray;
+
+                        p {
+                            font-weight: 500;
+                            margin: 0 0 0.5em;
+                        }
 
                         audio {
                             display: block;
@@ -70,15 +139,25 @@
                     .answer {
                         width: 100%;
                         padding: 1em;
-                        border-radius: 8px;
+                        border-radius: 12px;
                         background-color: lighten($color__gray__dark, 10%);
 
                         a {
+                            display: block;
+                            width: 100%;
                             text-decoration: none;
+
+                            &:focus {
+                                outline: 0;
+                            }
+
+                            &:focus-visible {
+                                outline: 2px solid $color__orange;
+                            }
                         }
 
                         p {
-                            //display: none;
+                            display: none;
                             width: 100%;
                             margin: 1em 0 0 0;
                         }
