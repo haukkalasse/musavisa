@@ -111,7 +111,7 @@ foreach ( $translated_songs as $song ) {
 
 		<div class="player">
 			<p>Text to Speech</p>
-			<audio controls>
+			<audio controls preload="auto">
 				<source src="tts/<?php echo $song['tts']; ?>" type="audio/mpeg">
 			</audio> 
 		</div>
@@ -119,7 +119,7 @@ foreach ( $translated_songs as $song ) {
 
 		<div class="player">
 			<p>Kappale</p>
-			<audio controls>
+			<audio controls preload="auto">
 				<source src="music/<?php echo $song['file']; ?>" type="audio/mpeg">
 			</audio> 
 		</div>

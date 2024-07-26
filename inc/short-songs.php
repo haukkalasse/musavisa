@@ -147,7 +147,7 @@ foreach ( $short_songs as $song ) {
 		</div>
 
 		<div class="player">
-			<audio controls>
+			<audio controls preload="auto">
 				<source src="music/<?php echo $song['file']; ?>" type="audio/mpeg">
 			</audio> 
 		</div>
