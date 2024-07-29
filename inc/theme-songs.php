@@ -101,14 +101,14 @@ foreach ( $theme_songs as $song ) {
 		
 		<div class="player">
 			<p>Takaperin</p>
-			<audio controls preload="auto">
+			<audio controls>
 				<source src="reverse/<?php echo $song['file_reverse']; ?>" type="audio/mpeg">
 			</audio> 
 		</div>
 
 		<div class="player">
 			<p>Alkuperäinen</p>
-			<audio controls preload="auto">
+			<audio controls>
 				<source src="themes/<?php echo $song['file_standard']; ?>" type="audio/mpeg">
 			</audio> 
 		</div>
